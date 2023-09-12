@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { BookmarkIcon } from '@heroicons/react/24/solid'
+import { BookmarkIcon } from '@heroicons/react/24/solid';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleAddToBookMarks }) => {
     const { title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         <div>
@@ -16,7 +16,7 @@ const Blog = ({ blog }) => {
                 </div>
                 <div className='flex gap-1 text-xl font-semibold text-[#11111199]'>
                     <p>{reading_time} min read</p>
-                    <button><BookmarkIcon className="h-6 w-6"></BookmarkIcon></button>
+                    <button onClick={() => handleAddToBookMarks(`${title}`)}><BookmarkIcon className="h-6 w-6"></BookmarkIcon></button>
                 </div>
             </div>
             <p className='text-4xl font-bold my-4'>{title}</p>
@@ -33,6 +33,7 @@ const Blog = ({ blog }) => {
     );
 };
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleAddToBookMarks: PropTypes.func.isRequired
 }
 export default Blog;

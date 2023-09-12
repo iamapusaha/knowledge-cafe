@@ -30,7 +30,7 @@
         "id": 3,
         "cover": "https://i.ibb.co/RzGzcPg/3.png",
         "title": "Component lifecycle in React — Class component vs Functional component",
-        "author_img": "'https://i.ibb.co/vwGwnhT/boy2.jpg'",
+        "author_img": "https://i.ibb.co/vwGwnhT/boy2.jpg",
         "author": "Feroze Khan'",
         "posted_date": "July 10, 2023'",
         "reading_time": 10,
