@@ -16,7 +16,8 @@ const BookMarks = ({ bookMarks, readingTime }) => {
     );
 };
 BookMarks.propTypes = {
-    bookMarks: PropTypes.array.isRequired
+    bookMarks: PropTypes.array.isRequired,
+    readingTime: PropTypes.number.isRequired
 };
 
 export default BookMarks;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { BookmarkIcon } from '@heroicons/react/24/solid';
 
 const Blog = ({ blog, handleAddToBookMarks, handleMarkAsRead }) => {
-    const { title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
+    const { id, title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         <div>
             <img className='w-full rounded-lg mb-8' src={cover} alt={`this image abourt ${title}`} />
@@ -25,7 +25,7 @@ const Blog = ({ blog, handleAddToBookMarks, handleMarkAsRead }) => {
                     hashtags.map((hash, idx) => <span key={idx}> #{hash}</span>)
                 }
             </div>
-            <button onClick={() => handleMarkAsRead(reading_time)} className='text-sm font-semibold text-[#6047EC]'>Mark as read</button>
+            <button onClick={() => handleMarkAsRead(reading_time, id)} className='text-sm font-semibold text-[#6047EC]'>Mark as read</button>
             <div className='my-10'>
                 <hr />
             </div>
