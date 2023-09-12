@@ -7,7 +7,8 @@ import Header from './components/Header/Header'
 function App() {
   const [bookMarks, setBookMarks] = useState([])
   const handleAddToBookMarks = (blog) => {
-    console.log(`handle book marks added! ${blog}`);
+    const newBookMarks = [...bookMarks, blog]
+    setBookMarks(newBookMarks)
   }
 
   return (
@@ -15,7 +16,8 @@ function App() {
       <Header></Header>
       <main className='grid grid-cols-3 container mx-auto gap-6'>
         <Blogs handleAddToBookMarks={handleAddToBookMarks}></Blogs>
-        <BookMarks></BookMarks>
+        <BookMarks bookMarks={bookMarks}>
+        </BookMarks>
       </main>
     </>
   )

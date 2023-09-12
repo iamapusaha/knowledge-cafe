@@ -16,7 +16,7 @@ const Blog = ({ blog, handleAddToBookMarks }) => {
                 </div>
                 <div className='flex gap-1 text-xl font-semibold text-[#11111199]'>
                     <p>{reading_time} min read</p>
-                    <button onClick={() => handleAddToBookMarks(`${title}`)}><BookmarkIcon className="h-6 w-6"></BookmarkIcon></button>
+                    <button onClick={() => handleAddToBookMarks(blog)}><BookmarkIcon className="h-6 w-6"></BookmarkIcon></button>
                 </div>
             </div>
             <p className='text-4xl font-bold my-4'>{title}</p>
